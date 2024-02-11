@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{6933D9F9-057E-4F12-A316-BF1278DDD941}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets">
+    <Files>
+      <File FileName="../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" Line="113" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="chaha_app" expanded="True" selected="True">
+            <Node name="chaha_app" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_34_extension_level_7_arm64-v8a" />
+  <MonoDevelop.Ide.ItemProperties.chaha__app PreferredExecutionTarget="Android.Pixel_3a_API_34_extension_level_7_arm64-v8a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

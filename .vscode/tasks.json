@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "maui",
+			"targetFramework": "net8.0-android",
+			"configuration": "Debug",
+			"project": "/Users/iranchoudhury/Documents/chaha_app/chaha_app.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"label": "maui: Build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

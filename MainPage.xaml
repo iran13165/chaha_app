@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:chaha_app.ViewModel"
+             xmlns:model="clr-namespace:chaha_app.Model"
+             x:DataType="viewmodel:MainViewModel"
+             x:Class="chaha_app.MainPage"
+             Shell.BackgroundColor="#5B5EA6"
+             BackgroundColor="#fffce4"
+             
+             Title="Home">
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="ADD DEED PAGE" HorizontalOptions="Center" VerticalOptions="Center"
+            CharacterSpacing="3"
+            FontAttributes="Bold"
+            FontSize="24"
+            TextColor="White"/>
+        </Grid>
+    </Shell.TitleView>
+    <ScrollView>
+        
+         <Grid RowDefinitions="auto,auto,auto,auto" VerticalOptions="Start" Padding="10" Margin="10">
+            <Border Grid.Row="0"
+             Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 10,0,0,10">
+            <Grid ColumnDefinitions="Auto,*" RowDefinitions="auto,auto,auto,auto,auto,*" VerticalOptions="Start" Padding="10" Margin="10">
+                
+               
+                <Border
+                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                 Stroke="#C49B33"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                Background="#2B0B98"
+                Padding="16,8"
+                HorizontalOptions="Center">
+            <Label Text="BUYER DETAILS"
+                TextColor="White"
+                FontSize="18"
+                FontAttributes="Bold" />
+                </Border>
+
+                <Label Text="Buyer : " Grid.Row="1" Grid.Column="0" 
+                FontAttributes="Bold"
+                FontSize="16"
+                VerticalOptions="Center"/>
+                <Entry Text="{Binding Deed.Owner, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="16"/>
+
+                <Label Text="Mouza: " Grid.Row="2" Grid.Column="0" VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="16"/>
+                <Entry Text="{Binding Deed.Mouza}" Grid.Row="2" Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="16"/>
+
+                <Label Text="At: " Grid.Row="3" Grid.Column="0" VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="16"/>
+                <Entry Text="{Binding Deed.At}" Grid.Row="3" Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="16"/>
+
+                <Label Text="Deed No: " Grid.Row="4" Grid.Column="0" VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="16"/>
+                <Entry Text="{Binding Deed.DeedNo}" Grid.Row="4" Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="16"/>
+
+                <Label Text="Date: " Grid.Row="5" Grid.Column="0" VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="16"/>
+                <DatePicker Format="dd/MM/yyyy" MinimumDate="01/01/2024"
+                Date="{Binding Deed.Date}" Grid.Row="5" Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="16"/>
+            </Grid>
+            </Border>
+            <Border Grid.Row="1"
+            Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 10,0,0,10">
+            <Grid RowDefinitions="auto,auto">
+            <VerticalStackLayout Grid.Row="0">
+                <Button Margin="10" Text = "Add Description" Command="{Binding AddDescriptionCommand}"
+                FontAttributes="Bold"
+                BackgroundColor="#34568B"
+                WidthRequest="200"
+                    FontSize="18"
+                />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1">
+                <CollectionView ItemsSource="{Binding Descriptions}" VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Description">
+                <Frame BackgroundColor="#fffce4" BorderColor="#C49B33"
+                                CornerRadius="5"
+                                >
+                    <VerticalStackLayout>
+                          <Grid Grid.Row="0" ColumnDefinitions="Auto,*">
+                          <Label Grid.Column="0" Text="PlotNo : " Margin="10"/>
+                          <Entry Grid.Column="1" Text="{Binding PlotNo}" />
+                          </Grid>
+
+                         <Grid Grid.Row="0" ColumnDefinitions="Auto,*">
+                         <Label Text="KhatiyanNo : " Margin="10"/>
+                         <Entry Grid.Column="1" Text="{Binding KhatiyanNo}" />
+                         </Grid>
+
+                         <Grid Grid.Row="0" ColumnDefinitions="Auto,*">
+                          <Label Text="LandArea : " Margin="10"/>
+                         <Entry Grid.Column="1" Text="{Binding LandArea}" Keyboard="Numeric"/>
+                         </Grid>
+
+                         <Grid Grid.Row="6">
+                            
+                            <Button Margin="10" Text="Detete" Grid.Column="1"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}},Path= RemoveDescriptionCommand}" CommandParameter="{Binding .}"
+                            FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+                         </Grid>
+                    </VerticalStackLayout>                   
+                </Frame>
+           </DataTemplate>
+                </CollectionView.ItemTemplate>
+                 </CollectionView>
+            </VerticalStackLayout>
+            </Grid>
+            </Border>
+
+            <VerticalStackLayout Grid.Row="2">
+            <Button Grid.Row="0" Margin="3" Text = "{Binding AddOrUpdate}" Grid.ColumnSpan="2" Command="{Binding AddDataCommand}"
+            FontAttributes="Bold"
+                BackgroundColor="#34568B"
+                WidthRequest="150"
+                    FontSize="18"/>
+            <Button Grid.Row="1" Margin="3" Grid.ColumnSpan="2" Text = "Deed Details" Command="{Binding GoToDeedDisplatPageCommand}"
+            FontAttributes="Bold"
+                BackgroundColor="#34568B"
+                WidthRequest="200"
+                    FontSize="18"/>
+            <Button Grid.Row="2" Margin="3" Grid.ColumnSpan="2" Text = "Exit App" Command="{Binding ExitAppCommand}"
+            FontAttributes="Bold"
+                BackgroundColor="#34568B"
+                WidthRequest="150"
+                    FontSize="18"/>
+            </VerticalStackLayout>
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>

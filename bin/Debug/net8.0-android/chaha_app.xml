@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>chaha_app</name>
+    </assembly>
+    <members>
+        <member name="T:chaha_app.ViewModel.DeedDisplayViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.Deeds">
+            <inheritdoc cref="F:chaha_app.ViewModel.DeedDisplayViewModel.deeds"/>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.Owner">
+            <inheritdoc cref="F:chaha_app.ViewModel.DeedDisplayViewModel.owner"/>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.KhatiyanNo">
+            <inheritdoc cref="F:chaha_app.ViewModel.DeedDisplayViewModel.khatiyanNo"/>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.PlotNo">
+            <inheritdoc cref="F:chaha_app.ViewModel.DeedDisplayViewModel.plotNo"/>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.loadAllDeedsCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.LoadAllDeedsCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.LoadAllDeedsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.LoadAllDeeds"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.searchByOwnerCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByOwnerCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByOwnerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.SearchByOwner"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.searchByPlotNoCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByPlotNoCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByPlotNoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.SearchByPlotNo"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.searchByKhatiyanNoCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByKhatiyanNoCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.SearchByKhatiyanNoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.SearchByKhatiyanNo"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.goToMainCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.GoToMainCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.GoToMainCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.GoToMain(chaha_app.Model.Deed)"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.addDeedCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.AddDeedCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.AddDeedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.AddDeed"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.Delete(chaha_app.Model.Deed)"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.DeedDisplayViewModel.printPdfCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.DeedDisplayViewModel.PrintPdfCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.DeedDisplayViewModel.PrintPdfCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.DeedDisplayViewModel.PrintPdf"/>.</summary>
+        </member>
+        <member name="T:chaha_app.ViewModel.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.AddOrUpdate">
+            <inheritdoc cref="F:chaha_app.ViewModel.MainViewModel.addOrUpdate"/>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.Deed">
+            <inheritdoc cref="F:chaha_app.ViewModel.MainViewModel.deed"/>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.Descriptions">
+            <inheritdoc cref="F:chaha_app.ViewModel.MainViewModel.descriptions"/>
+        </member>
+        <member name="F:chaha_app.ViewModel.MainViewModel.addDataCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.MainViewModel.AddDataCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.AddDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.MainViewModel.AddData"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.MainViewModel.goToDeedDisplatPageCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.MainViewModel.GoToDeedDisplatPageCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.GoToDeedDisplatPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.MainViewModel.GoToDeedDisplatPage"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.MainViewModel.exitAppCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.MainViewModel.ExitAppCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.ExitAppCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.MainViewModel.ExitApp"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.MainViewModel.addDescriptionCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.MainViewModel.AddDescriptionCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.AddDescriptionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:chaha_app.ViewModel.MainViewModel.AddDescription"/>.</summary>
+        </member>
+        <member name="F:chaha_app.ViewModel.MainViewModel.removeDescriptionCommand">
+            <summary>The backing field for <see cref="P:chaha_app.ViewModel.MainViewModel.RemoveDescriptionCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.ViewModel.MainViewModel.RemoveDescriptionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:chaha_app.ViewModel.MainViewModel.RemoveDescription(chaha_app.Model.Description)"/>.</summary>
+        </member>
+        <member name="T:chaha_app.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:chaha_app.LoginViewModel.Email">
+            <inheritdoc cref="F:chaha_app.LoginViewModel.email"/>
+        </member>
+        <member name="P:chaha_app.LoginViewModel.Password">
+            <inheritdoc cref="F:chaha_app.LoginViewModel.password"/>
+        </member>
+        <member name="F:chaha_app.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:chaha_app.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:chaha_app.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:chaha_app.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="T:PrintDemo.PrintService">
+            <summary>
+            Abstract Service that has platform specific code implemented
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Deeds">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Deeds" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.KhatiyanNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "KhatiyanNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PlotNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PlotNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AddOrUpdate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AddOrUpdate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Deed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Deed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Descriptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Descriptions" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Deeds">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Deeds" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.KhatiyanNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "KhatiyanNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PlotNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PlotNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AddOrUpdate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AddOrUpdate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Deed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Deed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Descriptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Descriptions" generated properties.</summary>
+        </member>
+    </members>
+</doc>

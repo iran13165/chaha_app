@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:chaha_app.ViewModel"
+             xmlns:model="clr-namespace:chaha_app.Model"
+             x:DataType="viewmodel:DeedDisplayViewModel"
+             x:Class="chaha_app.DeedDisplayPage"
+             Shell.BackgroundColor="#5B5EA6"
+             BackgroundColor="#fffce4"
+             Title="DeedDisplayPage">
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="DEED DETAILS" HorizontalOptions="Center" VerticalOptions="Center"
+            CharacterSpacing="3"
+            FontAttributes="Bold"
+            FontSize="24"
+            TextColor="White"/>
+        </Grid>
+    </Shell.TitleView>
+    <StackLayout>
+    <Button Text="All Deeds" Margin="10" Command="{Binding LoadAllDeedsCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+    <Grid Grid.ColumnDefinitions="*,Auto" Grid.RowDefinitions="Auto,Auto,Auto,Auto" Margin="10">
+
+    <Entry  Grid.Column="0" Text = "{Binding Owner}"/>
+    <Button Grid.Column="1"  Text="Search By Buyer" Command="{Binding SearchByOwnerCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="12"/>
+
+    <Entry  Grid.Column="0" Margin="5" Grid.Row="1" Text = "{Binding PlotNo}"/>
+    <Button Grid.Column="1" Margin="5" Grid.Row="1" Text="Search By PlotNo" Command="{Binding SearchByPlotNoCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="12"/>
+
+    <Entry  Grid.Column="0" Grid.Row="2" Text = "{Binding KhatiyanNo}"/>
+    <Button Grid.Column="1" Grid.Row="2" Text="Search By KhatiyanNo" Command="{Binding SearchByKhatiyanNoCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="160"
+                                FontSize="12"/>
+
+
+    <Button Text="Print" Margin="10" Grid.Row="3"  Command="{Binding PrintPdfCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+    <Button Text="Add Deed" Margin="10" Grid.Row="3" Grid.Column="1"  Command="{Binding AddDeedCommand}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+    </Grid>
+    <CollectionView ItemsSource="{Binding Deeds}" VerticalOptions="FillAndExpand">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Deed">
+                <Frame BackgroundColor="#fffce4" BorderColor="Green"
+                                CornerRadius="10" HasShadow="True" Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Path=Index, StringFormat='Buyer: {0}'}"
+                            TextColor="#C49B33"
+                            FontSize="24"
+                            FontAttributes="Bold" 
+                            HorizontalOptions="Center"
+                            TextDecorations="Underline"
+                            Margin="0,0,0,10"/>
+                        <Frame BackgroundColor="#fffce4" BorderColor="#C49B33"
+                                CornerRadius="20">
+                        <Grid Grid.Row="0" RowDefinitions="auto,auto,auto,auto,auto,*">
+
+                        <Label Text="BUYER DETAILS"
+                            TextColor="Blue"
+                            FontSize="18"
+                            FontAttributes="Bold" 
+                            HorizontalOptions="Center"
+                            TextDecorations="Underline"
+                            />
+                            
+                         <Label Grid.Row="1" Text="{Binding Path=Owner, StringFormat='Buyer: {0}'}" FontSize="24"/>
+                         <Label Grid.Row="2" Text="{Binding Path=Mouza, StringFormat='Mouza: {0}'}" FontSize="24"/>
+                         <Label Grid.Row="3" Text="{Binding Path=At, StringFormat='At: {0}'}" FontSize="24"/>
+
+                         <Label Grid.Row="4" Text="{Binding Path=DeedNo, StringFormat='DeedNo: {0}'}" FontSize="24"/>
+                         <Label Grid.Row="5" Text="{Binding Path=Date, StringFormat='Date: {0:dd-MM-yyyy}'}" FontSize="24"/>
+                        
+                         </Grid>
+                          </Frame>
+                        <Frame BackgroundColor="#fffce4" BorderColor="#C49B33"
+                                CornerRadius="5">
+                        <VerticalStackLayout>
+                             <Label Text="DESCRIPTIONS DETAILS"
+                            TextColor="Blue"
+                            FontSize="18"
+                            FontAttributes="Bold" 
+                            HorizontalOptions="Center"
+                            TextDecorations="Underline"
+                            Margin="0,0,0,20"
+                            />
+                         <CollectionView Grid.Row="5"  ItemsSource="{Binding Descriptions}" VerticalOptions="FillAndExpand">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="model:Description">
+                                    <Frame BackgroundColor="#fffce4" BorderColor="#C49B33"
+                                CornerRadius="5">
+                                    <VerticalStackLayout>
+                                    <Label Grid.Row="0" Text="{Binding Path=PlotNo, StringFormat='PlotNo: {0}'}" FontSize="24"/>
+                                    <Label Grid.Row="1" Text="{Binding Path=KhatiyanNo, StringFormat='KhatiyanNo: {0}'}" FontSize="24"/>
+                                    <Label Grid.Row="2" Text="{Binding Path=LandArea, StringFormat='LandArea: {0}'}" FontSize="24"/>
+                                    </VerticalStackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                         </CollectionView>
+                         <Label Grid.Row="6" FontAttributes="Bold" HorizontalOptions="Center" Text="{Binding Path=TotalArea, StringFormat='TOTAL AREA: {0}'}" FontSize="24" TextColor="Blue"/>
+                         </VerticalStackLayout>
+                         </Frame>
+                         <Grid Grid.Row="7" Grid.ColumnDefinitions="*,*">
+                            <Button Margin="10" Text="Edit" Grid.Column="0"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DeedDisplayViewModel}},Path= GoToMainCommand}" CommandParameter="{Binding .}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+                            <Button Margin="10" Text="Detete" Grid.Column="1"  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:DeedDisplayViewModel}},Path= DeleteCommand}" CommandParameter="{Binding .}" FontAttributes="Bold"
+                            BackgroundColor="#34568B"
+                            WidthRequest="150"
+                                FontSize="18"/>
+                         </Grid>
+                    </VerticalStackLayout>                   
+                </Frame>
+           </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    </StackLayout>
+</ContentPage>
